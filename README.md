@@ -1,24 +1,50 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# my_todo DB設計
 
-Things you may want to cover:
+## usersテーブル
+|Column|Type|Option|
+|------|----|------|
+|nickname|string|null: false|
+|email|string|null: false, unipue: true|
+|password|string|null: false|
+|user_image|string||
 
-* Ruby version
+### association
+has_many :tasks
+has_many :groups, through: :groups_users
+has_many :groups_users
 
-* System dependencies
+## groupsテーブル
+|Column|Type|Option|
+|------|----|------|
+|name|string|null: false|
 
-* Configuration
+### association
+has_many :tasks
+has_many :users, through: :groups_users
+has_many :groups_users
 
-* Database creation
+## tasksテーブル
+|Column|Type|Option|
+|------|----|------|
+|title|string|null: false|
+|content|text||
+|start_date|datetime||
+|end_date|datetime||
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
-* Database initialization
+### association
+belongs_to :user
+belongs_to :group
 
-* How to run the test suite
+## groups_usersテーブル
+|Column|Type|Option|
+|------|----|------|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### association
+belongs_to :user
+belongs_to :group
