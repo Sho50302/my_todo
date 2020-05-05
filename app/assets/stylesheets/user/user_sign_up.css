@@ -1,0 +1,113 @@
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+#sign_up {
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+}
+
+#app_title {
+  text-align: center;
+  line-height: 100px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#app_title a {
+  color: #000;
+}
+
+.sign_up_user {
+  width: 550px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.sign_up_user_contents {
+  height: 550px;
+}
+
+.sign_up_image {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0;
+  line-height: 115px;
+}
+
+
+.user_image_field {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  border: 1px solid;
+  margin: 0 auto;
+  background-color: #c3c3c3;
+  cursor: pointer;
+}
+
+.user_image {
+  width: 60px;
+  height: 60px;
+}
+
+#user_user_image {
+  display: none;
+}
+
+.image_description {
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+}
+
+.sign_up_input {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.sign_up_field {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.user_input {
+  width: 330px;
+  height: 40px;
+  font-size: 15px;
+  padding: 0 10px;
+  margin-top: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+}
+
+.user_span {
+  color: red;
+  margin-left: 5px;
+}
+
+.sign_up_action {
+  width: 330px;
+  margin: 30px auto;
+}
+
+.sign_up_btn {
+  width: 330px;
+  height: 50px;
+  background-color: #ff6347;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+
+
