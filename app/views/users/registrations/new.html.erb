@@ -1,0 +1,54 @@
+<div id="sign_up">
+  <div id="app_title">
+    <%= link_to "My-Todo", root_path %>
+  </div>
+  <div class="sign_up_user">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="sign_up_user_contents">
+        <div class="sign_up_image">
+          <label>
+           <div class="user_image_field">
+              <img class="user_image" src="/assets/icon_158580_64.png" alt="デフォルト画像">
+            </div>
+            <%= f.file_field :user_image %>
+          </label>
+        </div>
+  
+        <div class="image_description">
+          <p>＊画像はなしでも登録できます</p>
+        </div>
+    
+        <div class="sign_up_input">
+          <div class="sign_up_field">
+          <%= f.label :"ニックネーム" %><span class="user_span">*</span>
+          <%= f.text_field :nickname, placeholder: "20文字以内で入力してください", class:     "user_input" %>
+          </div>
+    
+          <div class="sign_up_field">
+            <%= f.label :"メールアドレス" %><span class="user_span">*</span>
+            <%= f.email_field :email, autocomplete: "email", placeholder: "＠、ドメインを含めて入力してください", class: "user_input" %>
+          </div>
+    
+          <div class="sign_up_field">
+            <%= f.label :"パスワード7文字以上" %><span class="user_span">*</span>
+            <%= f.password_field :password, autocomplete: "new-password", placeholder:
+            "半角英数字を1文字以上含んで入力してください", class: "user_input" %>
+          </div>
+    
+          <div class="sign_up_field">
+            <%= f.label :"パスワード確認" %><span class="user_span">*</span>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password",   placeholder:
+            "パスワードをもう一度入力してください", class: "user_input" %>
+          </div>
+    
+          <div class="sign_up_action">
+            <%= f.submit "登録する", class: "sign_up_btn" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
