@@ -1,0 +1,70 @@
+#sign_in {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.user_sign_in {
+  width: 550px;
+  height: 500px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.sign_up_path {
+  width: 330px;
+  height: 150px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 150px;
+}
+
+.sign_up_path_btn {
+  display: inline-block;
+  width: 330px;
+  height: 50px;
+  background-color: #ff6347;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  line-height: 50px;
+  color: #000;
+}
+
+.sign_in_input {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.sign_in_field {
+  width: 350px;
+  height: 80px;
+}
+
+.field_input {
+  width: 330px;
+  height: 40px;
+  font-size: 15px;
+  padding: 0 10px;
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.sign_in_action {
+  width: 330px;
+  margin: 30px auto;
+}
+
+.sign_in_btn {
+  width: 330px;
+  height: 50px;
+  background-color: #87cefa;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
