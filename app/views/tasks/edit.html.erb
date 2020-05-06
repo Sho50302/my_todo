@@ -1,0 +1,83 @@
+<div id="task_new">
+  <div id="app_title">
+    <%= link_to "My-Todo", tasks_path %>
+  </div>
+  <div class="task_new_form">
+    <div class="task_input">
+      <div class="task_title">
+        <p>タイトル<span class="title_span">*</span></p>
+        <input type="text" class="input_title" >
+      </div>
+      <div class="task_text">
+        <p>本文</p>
+        <textarea class="input_text"></textarea>
+      </div>
+    </div>
+    <div class="datetime_field">
+      <div class="start_field">
+        <div class="start">
+          <p>開始</p>
+        </div>
+        <div class="start_date">
+          <select name="start_date" id="date_select">
+            <option>2020/05/01</option>
+            <option>2020/05/02</option>
+            <option>2020/05/03</option>
+            <option>2020/05/04</option>
+            <option>2020/05/05</option>
+          </select>
+        </div>
+        <div class="start_time">
+          <div class="start_hour">
+            <select name="hour_time" id="time_select">
+              <option>00</option>
+              <option>01</option>
+              <option>02</option>
+            </select>
+          </div>
+          <span class="center">:</span>
+          <div class="start_minite">
+            <select name="minite_time" id="time_select">
+              <option>00</option>
+              <option>01</option>
+              <option>02</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="end_field">
+        <div class="end">
+          <p>終了</p>
+        </div>
+        <div class="end_date">
+          <select name="end_date" id="date_select">
+            <option>2020/05/01</option>
+            <option>2020/05/02</option>
+            <option>2020/05/03</option>
+            <option>2020/05/04</option>
+            <option>2020/05/05</option>
+          </select>
+        </div>
+        <div class="end_time">
+          <div class="end_hour">
+            <select name="hour_time" id="time_select">
+              <option>00</option>
+              <option>01</option>
+              <option>02</option>
+            </select>
+          </div>
+          <span class="center">:</span>
+          <div class="end_minite">
+            <select name="minite_time" id="time_select">
+              <option>00</option>
+              <option>01</option>
+              <option>02</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="new_task_btn">
+      <input type="submit" id="task_btn" value="変更する">
+    </div>
+  </div>
