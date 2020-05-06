@@ -1,0 +1,108 @@
+<div id="task_index">
+  <div class="task_contents">
+    <div class="left_contents">
+      <div class="left_head">
+        <div class="head_contents">
+          <div class="head_image">
+          </div>
+          <div class="head_name">
+            <p>shogo</p>
+          </div>
+        </div>
+      </div>
+      <div class="left_body">
+        <div class="body_head">
+          <i class="fas fa-users"></i><br>
+          <%= link_to "グループ作成", "#" %>
+        </div>
+        <div class="body_body">
+          <ul>
+            <li class="group_list">グループA</li>
+            <li class="group_list">グループB</li>
+            <li class="group_list">グループC</li>
+            <%# <li class="group_list">グループD</li>
+            <li class="group_list">グループE</li>
+            <li class="group_list">グループF</li>
+            <li class="group_list">グループG</li>
+            <li class="group_list">グループH</li>
+            <li class="group_list">グループI</li>
+            <li class="group_list">グループJ</li>
+            <li class="group_list">グループK</li>
+            <li class="group_list">グループL</li>
+            <li class="group_list">グループM</li>
+            <li class="group_list">グループN</li> %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="right_content">
+      <div class="right_head">
+        <div class="right_head_left">
+          <div class="group_contents">
+            <div class="group_name">
+              <p>グループA</p>
+            </div>
+            <div class="group_members">
+              <ul class="group_member">
+                <li class="member_name">
+                  <p>shogo</p>
+                  <img class="member_image">
+                </li>
+                <li class="member_name">
+                  <p>haru</p>
+                  <img class="member_image">
+                </li>
+                <li class="member_name">
+                  <p>hisasi</p>
+                  <img class="member_image">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="group_edit">
+            <%= link_to "グループ編集", "#" %>
+          </div>
+        </div>
+        <div class="right_head_right">
+          <div class="new_task">
+            <i class="fas fa-feather-alt"></i>
+          </div>
+          <div class="task_select">
+            <select class="select_tasks">
+              <option>並び替え</option>
+              <option>新着順</option>
+              <option>古い順</option>
+              <option>期限近い順</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="right_body">
+        <div class="task">
+          <div class="task_title">
+            <p>個人アプリ(構成)</p>
+          </div>
+          <div class="task_complete">
+            <%= link_to "完了", "#", class: "complete_btn"%>
+          </div>
+        </div>
+        <div class="task">
+          <div class="task_title">
+            <p>個人アプリ(フロントサイド)</p>
+          </div>
+          <div class="task_complete">
+            <%= link_to "完了", "#", class: "complete_btn"%>
+          </div>
+        </div>
+        <div class="task">
+          <div class="task_title">
+            <p>個人アプリ(サーバーサイド)</p>
+          </div>
+          <div class="task_complete">
+            <%= link_to "完了", "#", class: "complete_btn"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
