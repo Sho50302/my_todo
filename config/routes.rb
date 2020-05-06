@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     sessions: "users/sessions"
   }
 
-  resources :tasks, only: [:index, :new, :create]
+  resources :tasks, only: [:index, :new, :create, :edit, :update]
   root "top#index"
 end
