@@ -65,7 +65,9 @@
         </div>
         <div class="right_head_right">
           <div class="new_task">
-            <i class="fas fa-feather-alt"></i>
+            <%= link_to new_task_path do %>
+              <i class="fas fa-feather-alt"></i>
+            <% end %>
           </div>
           <div class="task_select">
             <select class="select_tasks">
@@ -79,7 +81,7 @@
       </div>
       <div class="right_body">
         <div class="task">
-          <div class="task_title">
+          <div class="task_name">
             <p>個人アプリ(構成)</p>
           </div>
           <div class="task_complete">
@@ -87,7 +89,7 @@
           </div>
         </div>
         <div class="task">
-          <div class="task_title">
+          <div class="task_name">
             <p>個人アプリ(フロントサイド)</p>
           </div>
           <div class="task_complete">
@@ -95,7 +97,7 @@
           </div>
         </div>
         <div class="task">
-          <div class="task_title">
+          <div class="task_name">
             <p>個人アプリ(サーバーサイド)</p>
           </div>
           <div class="task_complete">
