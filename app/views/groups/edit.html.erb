@@ -1,0 +1,21 @@
+<div id="group_new">
+  <div id="app_title">
+    <%= link_to "My-Todo", tasks_path %>
+  </div>
+  <div class="group_field">
+    <div class="group_container">
+      <div class="new_group_name">
+        <p>グループ名<span class="title_span">*</span></p>
+        <input type="text" name="group_name" id="group_name_input">
+      </div>
+      <div class="new_search">
+        <p>メンバー検索</p>
+        <input type="search" name="member_search" id="group_member_search" placeholder="追加したいメンバーの入力">
+      </div>
+      <div class="edit_group">
+        <input type="submit" value="変更する" id="edit_group_btn">
+        <input type="submit" value="解散する" id="delete_group_btn">
+      </div>
+    </div>
+  </div>
+</div>

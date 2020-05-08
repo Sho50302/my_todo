@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   resources :tasks, only: [:index, :new, :create, :edit, :update]
   resources :users, only: :show
-  resources :groups, only: [:new, :create]
+  resources :groups, only: [:new, :create, :edit, :update]
   root "top#index"
 end
