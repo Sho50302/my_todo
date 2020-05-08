@@ -107,10 +107,21 @@
   margin: 0 auto;
 }
 
-#task_btn {
+#new_btn {
   width: 100%;
   height: 100%;
   background-color: #87cefa;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#edit_btn {
+  width: 100%;
+  height: 100%;
+  background-color: #00ff7f;
   font-size: 18px;
   font-weight: bold;
   outline: none;
