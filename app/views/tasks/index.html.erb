@@ -80,7 +80,7 @@
         </div>
       </div>
       <div class="right_body">
-        <div class="task">
+        <div id="task">
           <div class="task_name">
             <p>個人アプリ(構成)</p>
           </div>
@@ -88,23 +88,48 @@
             <%= link_to "完了", "#", class: "complete_btn"%>
           </div>
         </div>
-        <div class="task">
-          <div class="task_name">
-            <p>個人アプリ(フロントサイド)</p>
-          </div>
-          <div class="task_complete">
-            <%= link_to "完了", "#", class: "complete_btn"%>
-          </div>
-        </div>
-        <div class="task">
-          <div class="task_name">
-            <p>個人アプリ(サーバーサイド)</p>
-          </div>
-          <div class="task_complete">
-            <%= link_to "完了", "#", class: "complete_btn"%>
-          </div>
-        </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="modal_window">
+  <div class="modal_box">
+    <div class="task_show">
+      <div class="show_contents">
+        <div class="show_content">
+          <h1>タイトル</h1>
+          <div class="show_title">
+            <p>個人アプリ(構成)</p>
+          </div>
+        </div>
+        <div class="show_content">
+          <h1>本文</h1>
+          <div class="show_text">
+            <p>ビューの構成を完成させる。できなかったらペナルティ</p>
+          </div>
+        </div>
+        <div class="show_datetime">
+          <ul class="start_datetime">
+            <li><h1>開始</h1></li>
+            <li>2020/05/06</li>
+            <li>10:00</li>
+          </ul>
+        </div>
+        <div class="show_datetime">
+          <ul class="end_datetime">
+            <li><h1>終了</h1></li>
+            <li>2020/05/06</li>
+            <li>16:00</li>
+          </ul>
+        </div>
+        <ul class="show_btns">
+          <li class="edit_path"><%= link_to "編集" %></li>
+          <li class="delete_path"><%= link_to "完了" %></li>
+        </ul>
+      </div>
+      <span class="exit_btn">
+        <i class="fas fa-times-circle"></i>
+      </span>
     </div>
   </div>
 </div>
