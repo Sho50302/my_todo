@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   }
   get 'users/show'
 
-  resources :tasks, only: [:index, :new, :create, :edit, :update]
+  resources :tasks
   resources :users, only: :show
   resources :groups, only: [:new, :create, :edit, :update]
   root "top#index"
