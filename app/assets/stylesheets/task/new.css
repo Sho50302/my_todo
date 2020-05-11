@@ -60,18 +60,18 @@
   font-size: 20px;
 }
 
-.start_field {
+.start_field, .end_field {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
 }
 
-.start {
+.start, .end {
   height: 30px;
   line-height: 30px;
 }
 
-.start_time {
+.start_time, .end_time {
   display: flex;
 }
 
@@ -79,25 +79,11 @@
   margin: 0 5px;
 }
 
-.end_field {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.end {
-  height: 30px;
-  line-height: 30px;
-}
-
-.end_time {
-  display: flex;
-}
-
-#date_select {
+#start_date_select, #end_date_select {
   height: 30px;
 }
 
-#time_select {
+select {
   height: 30px;
 }
 
@@ -111,17 +97,6 @@
   width: 100%;
   height: 100%;
   background-color: #87cefa;
-  font-size: 18px;
-  font-weight: bold;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-
-#edit_btn {
-  width: 100%;
-  height: 100%;
-  background-color: #00ff7f;
   font-size: 18px;
   font-weight: bold;
   outline: none;

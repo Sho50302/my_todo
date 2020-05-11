@@ -3,81 +3,51 @@
     <%= link_to "My-Todo", tasks_path %>
   </div>
   <div class="task_new_form">
-    <div class="task_input">
-      <div class="task_title">
-        <p>タイトル<span class="title_span">*</span></p>
-        <input type="text" class="input_title" >
-      </div>
-      <div class="task_text">
-        <p>本文</p>
-        <textarea class="input_text"></textarea>
-      </div>
-    </div>
-    <div class="datetime_field">
-      <div class="start_field">
-        <div class="start">
-          <p>開始</p>
+    <%= form_with model: @task, url: task_path, method: :patch, local: true do |f| %>
+      <div class="task_input">
+        <div class="task_title">
+          <%= f.label :"タイトル" %><span class="title_span">*</span>
+          <%= f.text_field :title, class: "input_title" %>
         </div>
-        <div class="start_date">
-          <select name="start_date" id="date_select">
-            <option>2020/05/01</option>
-            <option>2020/05/02</option>
-            <option>2020/05/03</option>
-            <option>2020/05/04</option>
-            <option>2020/05/05</option>
-          </select>
-        </div>
-        <div class="start_time">
-          <div class="start_hour">
-            <select name="hour_time" id="time_select">
-              <option>00</option>
-              <option>01</option>
-              <option>02</option>
-            </select>
-          </div>
-          <span class="center">:</span>
-          <div class="start_minite">
-            <select name="minite_time" id="time_select">
-              <option>00</option>
-              <option>01</option>
-              <option>02</option>
-            </select>
-          </div>
+        <div class="task_text">
+          <%= f.label :"本文" %>
+          <%= f.text_area :content, class: "input_text" %>
         </div>
       </div>
-      <div class="end_field">
-        <div class="end">
-          <p>終了</p>
-        </div>
-        <div class="end_date">
-          <select name="end_date" id="date_select">
-            <option>2020/05/01</option>
-            <option>2020/05/02</option>
-            <option>2020/05/03</option>
-            <option>2020/05/04</option>
-            <option>2020/05/05</option>
-          </select>
-        </div>
-        <div class="end_time">
-          <div class="end_hour">
-            <select name="hour_time" id="time_select">
-              <option>00</option>
-              <option>01</option>
-              <option>02</option>
-            </select>
+      <div class="datetime_field">
+        <div class="start_field">
+          <div class="start">
+            <%= f.label :"開始" %>
+            <%= f.text_field :start_date, id: "start_date_select"%>
           </div>
-          <span class="center">:</span>
-          <div class="end_minite">
-            <select name="minite_time" id="time_select">
-              <option>00</option>
-              <option>01</option>
-              <option>02</option>
-            </select>
+          <div class="start_time">
+            <div class="start_hour">
+              <%= f.select :start_time_hour, Task.start_time_hours.keys, id: "time_select" %>
+            </div>
+            <span class="center">:</span>
+            <div class="start_minite">
+              <%= f.select :start_time_minute, Task.start_time_minutes.keys, id: "time_select" %>
+            </div>
+          </div>
+        </div>
+        <div class="end_field">
+          <div class="end">
+            <%= f.label :"終了" %>
+            <%= f.text_field :end_date, id: "end_date_select" %>
+          </div>
+          <div class="end_time">
+            <div class="end_hour">
+              <%= f.select :end_time_hour, Task.end_time_hours.keys, id: "time_select" %>
+            </div>
+            <span class="center">:</span>
+            <div class="end_minite">
+              <%= f.select :end_time_minute, Task.end_time_minutes.keys, id: "time_select" %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="new_task_btn">
-      <input type="submit" id="edit_btn" value="変更する">
-    </div>
+      <div class="new_task_btn">
+        <%= f.submit "変更する", id: "edit_btn" %>
+      </div>
+    <% end %>
   </div>

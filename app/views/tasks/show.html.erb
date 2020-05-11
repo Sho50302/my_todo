@@ -1,0 +1,41 @@
+<div class="task_show">
+  <div id="app_title">
+    <%= link_to "My-Todo", tasks_path %>
+  </div>
+  <div class="show_contents">
+    <div class="show_content">
+      <h1>タイトル</h1>
+      <div class="show_title">
+        <p><%= @task.title %></p>
+      </div>
+    </div>
+    <div class="show_content">
+      <h1>本文</h1>
+      <div class="show_text">
+        <p><%= @task.content %></p>
+      </div>
+    </div>
+    <div class="show_datetime">
+      <div class="start_title">
+        <h1>開始</h1>
+      </div>
+      <ul class="start_datetime">
+        <li><%= @task.start_date %></li>
+        <li><%= @task.start_time_hour %><span>:</span><%= @task.start_time_minute %></li>
+      </ul>
+    </div>
+    <div class="show_datetime">
+      <div class="end_title">
+        <h1>終了</h1>
+      </div>
+      <ul class="end_datetime">
+        <li><%= @task.end_date %></li>
+        <li><%= @task.end_time_hour %><span>:</span><%= @task.end_time_minute %></li>
+      </ul>
+    </div>
+    <ul class="show_btns">
+      <li class="edit_path"><%= link_to "編集" , edit_task_path(@task.id) %></li>
+      <li class="delete_path"><%= link_to "完了", task_path(@task.id), method: :delete, data: {confirm: "完了でよろしいですか？"} %></li>
+    </ul>
+  </div>
+</div
