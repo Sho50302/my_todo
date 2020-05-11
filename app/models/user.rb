@@ -9,8 +9,11 @@ class User < ApplicationRecord
   validates :encrypted_password, presence: :true
 
   has_many :tasks
-  has_many :groups, through: :groups_users
-  has_many :groups_users
+  has_many :groups, through: :group_users
+  has_many :group_users
+
+  mount_uploader :user_image, UserImageUploader
+
 end
 # , format: {with: /\A[a-zA-Z0-9_#!$%&`'*+-{|}~^\/=?.]+@[a-zA-Z0-9][a-zA-Z0-9.-]+\z/}
 # , length: {minimum: 7}
