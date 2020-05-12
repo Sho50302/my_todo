@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :email,              presence: true, uniqueness: true
   validates :encrypted_password, presence: :true
 
-  has_many :tasks
+  has_many :tasks, dependent: :destroy
   has_many :groups, through: :group_users
   has_many :group_users
 
