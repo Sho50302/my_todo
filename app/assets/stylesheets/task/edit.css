@@ -8,3 +8,19 @@
   border: none;
   cursor: pointer;
 }
+
+.task_edit_form {
+  width: 600px;
+  height: 500px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.task_cansel_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  color: #000;
+}

@@ -5,17 +5,17 @@
   <div class="show_field">
     <div class="user_data">
       <div class="show_image">
-        <img class="show_user_image" src="/assets/icon_158580_64.png" alt="デフォルト画像">
+        <%= image_tag @user.user_image.url, class: "show_user_image"%>
       </div>
       <div class="show_nickname">
-        <p>shogo</p>
+        <p><%= @user.nickname %></p>
       </div>
     </div>
     <div class="btns">
       <ul>
-        <li class="edit_btn"><%= link_to "編集" %></li>
-        <li class="logout_btn"><%= link_to "ログアウト" %></li>
-        <li class="delete_btn"><%= link_to "退会" %></li>
+        <li class="edit_btn"><%= link_to "編集", edit_user_registration_path %></li>
+        <li class="logout_btn"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <li class="delete_btn"><%= link_to "退会", user_registration_path, method: :delete %></li>
       </ul>
     </div>
   </div>

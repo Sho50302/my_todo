@@ -1,15 +1,18 @@
-html, body {
-  height: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
 #sign_up {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../Yuu171226IMGL0015.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: serif;
+}
+
+.top_title {
   width: 100%;
-  height: 100%;
-  background-color: #f3f3f3;
+  font-size: 60px;
+  text-align: center;
+  line-height: 80px;
+  padding: 20px 0;
 }
 
 #app_title {
@@ -96,7 +99,7 @@ a {
 
 .sign_up_action {
   width: 330px;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .sign_up_btn {
@@ -110,4 +113,10 @@ a {
   border: none;
 }
 
+.sign_in_path {
+  text-align: end;
+}
 
+.sign_in_path a {
+  color: #87cefa;
+}
