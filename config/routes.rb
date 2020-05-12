@@ -3,10 +3,9 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     sessions: "users/sessions"
   }
-  get 'users/show'
 
   resources :tasks
-  resources :users, only: :show
+  resources :users, only: [:show]
   resources :groups, only: [:new, :create, :edit, :update]
-  root "top#index"
+  root "tasks#index"
 end

@@ -2,7 +2,7 @@
   <div id="app_title">
     <%= link_to "My-Todo", tasks_path %>
   </div>
-  <div class="task_new_form">
+  <div class="task_edit_form">
     <%= form_with model: @task, url: task_path, method: :patch, local: true do |f| %>
       <div class="task_input">
         <div class="task_title">
@@ -48,6 +48,11 @@
       </div>
       <div class="new_task_btn">
         <%= f.submit "変更する", id: "edit_btn" %>
+      </div>
+      <div class="task_cansel">
+        <%= link_to task_path(@task.id), class: "task_cansel_btn" do %>
+          <i class="fas fa-backspace"></i>
+        <% end %>
       </div>
     <% end %>
   </div>

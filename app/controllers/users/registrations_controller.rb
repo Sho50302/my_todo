@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_sign_up_params, only: [:create]
-  before_action :configure_account_update_params, only: [:update]
+  # before_action :configure_sign_up_params, only: [:create]
+  # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   def new
@@ -13,30 +13,40 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     # super
-    @user = User.create(sign_up_params)
-    @user.user_image = "icon_158580_64.png"
+    @user = User.create(user_params)
     if @user.save
-      redirect_to tasks_path
+      # sign_up後ログイン状態が維持できないとき以下の記述をする
+      bypass_sign_in(@user)
+      redirect_to root_path
     else
       render :new
     end
   end
 
   # GET /resource/edit
+  # super
   def edit
-    super
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
   end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  # super
+  def update
+    @user = User.find(current_user.id)
+    if @user.update(user_params)
+      redirect_to user_path(current_user.id)
+    else
+      render :edit
+    end
+  end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  # super
+  def destroy
+    @user = User.find(current_user.id)
+    @user.destroy
+    redirect_to new_user_session_path
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
@@ -47,12 +57,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
+
+  def after_update_path_for(resource)
+    user_path(current_user.id)
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
-  def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  end
+  # def configure_sign_up_params
+  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
+  # end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_account_update_params
@@ -66,12 +80,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
+  #   tasks_path
   # end
 
   private
 
-  def sign_up_params
+  def user_params
     params.require(:user).permit(:nickname, :email, :password, :password_confirmation, :user_image)
   end
 end
