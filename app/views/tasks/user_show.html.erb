@@ -1,6 +1,6 @@
 <div class="task_show">
   <div id="app_title">
-    <%= link_to "My-Todo", group_path(@group) %>
+    <%= link_to "My-Todo", root_path %>
   </div>
   <div class="show_contents">
     <div class="show_content">
@@ -34,8 +34,8 @@
       </ul>
     </div>
     <ul class="show_btns">
-      <li class="edit_path"><%= link_to "編集" , edit_group_task_path(@group, @task.id) %></li>
-      <li class="delete_path"><%= link_to "完了", group_task_path(@group, @task), method: :delete, data: {confirm: "完了でよろしいですか？"} %></li>
+      <li class="edit_path"><%= link_to "編集" , user_edit_task_path(@task.id) %></li>
+      <li class="delete_path"><%= link_to "完了", user_destroy_task_path(@task.id), method: :delete, data: {confirm: "完了でよろしいですか？"} %></li>
     </ul>
   </div>
 </div

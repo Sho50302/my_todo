@@ -3,27 +3,42 @@
   height: 50px;
   margin: 30px auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  text-align: center;
 }
 
-#edit_group_btn {
+.e_btn {
   width: 150px;
   height: 50px;
   background-color: #00ff7f;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  border: none;
+  line-height: 48px;
 }
 
-#delete_group_btn {
+.d_btn {
   width: 150px;
   height: 50px;
   background-color: #ff6347;
+  line-height: 50px;
+}
+
+.d_btn a {
+  color: #000;
+}
+
+#edit_group_btn {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   outline: none;
   border: none;
+  background-color: #00ff7f;
+}
+
+#delete_group_btn {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #ff6347;
 }
