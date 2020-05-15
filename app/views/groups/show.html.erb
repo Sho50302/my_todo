@@ -15,26 +15,39 @@
       </div>
       <div class="left_body">
         <div class="body_head">
-          <%= link_to new_group_path do %>
-            <i class="fas fa-users"></i><br>
+          <%= link_to root_path do %>
+            <i class="fas fa-door-open"></i><br>
           <% end %>
         </div>
           <div class="body_body">
-            <% current_user.groups.each do |group| %>
-              <%= link_to group_path(group) do %>
-                <div class="group_list">
-                  <%= group.name %>
-                </div>
-              <% end %>
-            <% end %>
           </div>
       </div>
     </div>
     <div class="right_content">
       <div class="right_head">
+        <div class="right_head_left">
+          <div class="group_contents">
+            <div class="group_name">
+              <p><%= @group.name %></p>
+            </div>
+            <div class="group_members_show">
+              <% @group.users.each do |user| %>
+                <div class="group_member">
+                  <div class="member_name">
+                    <p><%= user.nickname %></p>
+                    <%= image_tag user.user_image.url, class: "member_image" %>
+                  </div>
+                </div>
+             <% end %>
+            </div>
+          </div>
+          <div class="group_edit">
+            <%= link_to "グループ編集", edit_group_path(@group) %>
+          </div>
+        </div>
         <div class="right_head_right">
           <div class="new_task">
-            <%= link_to user_new_tasks_path do %>
+            <%= link_to new_group_task_path(@group) do %>
               <i class="fas fa-feather-alt"></i>
             <% end %>
           </div>
@@ -50,17 +63,15 @@
       </div>
       <div class="right_body">
         <% @tasks.each do |task| %>
-          <% if task.group_id == nil %>
-            <%= link_to user_show_task_path(task.id) do %>
-              <div id="task">
-                <div class="task_name">
-                  <p><%= task.title %></p>
-                </div>
-                <div class="task_complete">
-                  <%= link_to "完了", user_destroy_task_path(task.id), method: :delete, data:{confirm: "完了でよいですか？"}, class: "complete_btn" %>
-                </div>
+          <%= link_to group_task_path(@group, task) do %>
+            <div id="task">
+              <div class="task_name">
+                <p><%= task.title %></p>
               </div>
-            <% end %>
+              <div class="task_complete">
+                <%= link_to "完了", group_task_path(@group, task), method: :delete, data:{confirm: "完了でよいですか？"}, class: "complete_btn" %>
+              </div>
+            </div>
           <% end %>
         <% end %>
       </div>

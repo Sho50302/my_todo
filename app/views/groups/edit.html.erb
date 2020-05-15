@@ -1,21 +1,26 @@
 <div id="group_new">
   <div id="app_title">
-    <%= link_to "My-Todo", tasks_path %>
+    <%= link_to "My-Todo", group_path %>
   </div>
   <div class="group_field">
-    <div class="group_container">
-      <div class="new_group_name">
-        <p>グループ名<span class="title_span">*</span></p>
-        <input type="text" name="group_name" id="group_name_input">
-      </div>
-      <div class="new_search">
-        <p>メンバー検索</p>
-        <input type="search" name="member_search" id="group_member_search" placeholder="追加したいメンバーの入力">
-      </div>
+    <%= form_with model: @group, url: group_path, method: :patch, local: true do |f| %>
+      <div class="group_container">
+        <div class="new_group_name">
+          <%= f.label :"グループ名" %><span class="title_span">*</span>
+          <%= f.text_field :name, id: "group_name_input" %>
+        </div>
+        <div class="new_search">
+          <%= f.label :"メンバー選択" %>
+          <%= f.collection_check_boxes :user_ids, User.all, :id ,:nickname%>
+        </div>
       <div class="edit_group">
-        <input type="submit" value="変更する" id="edit_group_btn">
-        <input type="submit" value="解散する" id="delete_group_btn">
+        <div class="e_btn">
+          <%= f.submit "変更する", id: "edit_group_btn" %> 
+        </div>
+        <div class="d_btn">
+          <%= link_to "解散する", group_path(@group), method: :delete, data: {confirm: "本当に解散しますか？"}, id: "delete_group_btn" %> 
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>

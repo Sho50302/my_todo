@@ -1,9 +1,9 @@
 <div id="task_new">
   <div id="app_title">
-    <%= link_to "My-Todo", group_path(@group) %>
+    <%= link_to "My-Todo", root_path %>
   </div>
   <div class="task_new_form">
-    <%= form_with model: [@group, @task], local: true do |f| %>
+    <%= form_with model: @task, url: user_create_tasks_path, method: :post, local: true do |f| %>
       <div class="task_input">
         <div class="task_title">
           <%= f.label :"タイトル" %><span class="title_span">*</span>

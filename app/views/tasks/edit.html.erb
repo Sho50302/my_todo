@@ -1,9 +1,9 @@
 <div id="task_new">
   <div id="app_title">
-    <%= link_to "My-Todo", tasks_path %>
+    <%= link_to "My-Todo", group_path(@group) %>
   </div>
   <div class="task_edit_form">
-    <%= form_with model: @task, url: task_path, method: :patch, local: true do |f| %>
+    <%= form_with model: [@group, @task], local: true do |f| %>
       <div class="task_input">
         <div class="task_title">
           <%= f.label :"タイトル" %><span class="title_span">*</span>
@@ -50,9 +50,10 @@
         <%= f.submit "変更する", id: "edit_btn" %>
       </div>
       <div class="task_cansel">
-        <%= link_to task_path(@task.id), class: "task_cansel_btn" do %>
+        <%= link_to group_task_path(@group, @task), class: "task_cansel_btn" do %>
           <i class="fas fa-backspace"></i>
         <% end %>
       </div>
     <% end %>
   </div>
+</div>
