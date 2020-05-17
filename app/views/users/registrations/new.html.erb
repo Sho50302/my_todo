@@ -1,16 +1,16 @@
 <div id="sign_up">
   <div class="top_title">
-    <h2>My-Todo</h2>
+    <h2>Todo-APP</h2>
   </div>
   <div class="sign_up_user">
     <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
       <div class="sign_up_user_contents">
         <div class="sign_up_image">
           <label>
-           <div class="user_image_field">
-              <img class="user_image" src="/assets/icon_158580_64.png" alt="デフォルト画像">
+            <div class="user_image_field">
+              <%= image_tag "/assets/icon_158580_64.png", class: "user_image"%>
             </div>
-            <%= f.file_field :user_image %>
+            <%= f.file_field :user_image , id: "file"%>
           </label>
         </div>
         <div class="image_description">
@@ -18,23 +18,38 @@
         </div>
         <div class="sign_up_input">
           <div class="sign_up_field">
-          <%= f.label :"ニックネーム" %><span class="user_span">*</span>
-          <%= f.text_field :nickname, placeholder: "20文字以内で入力してください", class: "user_input" %>
+            <%= f.label :"ニックネーム" %><span class="user_span">*</span>
+            <%= f.text_field :nickname, placeholder: "20文字以内で入力してください", class: "user_input" %>
           </div>
+          <ul class="input_error">
+            <li id="nickname_error"></li>
+          </ul>
           <div class="sign_up_field">
             <%= f.label :"メールアドレス" %><span class="user_span">*</span>
             <%= f.email_field :email, autocomplete: "email", placeholder: "＠、ドメインを含めて入力してください", class: "user_input" %>
           </div>
+          <ul class="input_error">
+            <li id="email_error"></li>
+          </ul>
           <div class="sign_up_field">
             <%= f.label :"パスワード7文字以上" %><span class="user_span">*</span>
             <%= f.password_field :password, autocomplete: "new-password", placeholder:
             "半角英数字を1文字以上含んで入力してください", class: "user_input" %>
-          </div>
+            <span id="password_eye">
+              <i toggle="password_eye_change" class="fas fa-eye" id="toggle_password"></i>
+            </span>
+          <ul class="input_error">
+            <li id="password_error"></li>
+          </ul>
+          </div>  
           <div class="sign_up_field">
             <%= f.label :"パスワード確認" %><span class="user_span">*</span>
             <%= f.password_field :password_confirmation, autocomplete: "new-password",   placeholder:
             "パスワードをもう一度入力してください", class: "user_input" %>
           </div>
+          <ul class="input_error">
+            <li id="password_confirmation_error"></li>
+          </ul>
           <div class="sign_up_action">
             <%= f.submit "登録する", class: "sign_up_btn" %>
           </div>

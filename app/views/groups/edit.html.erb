@@ -1,6 +1,6 @@
 <div id="group_new">
   <div id="app_title">
-    <%= link_to "My-Todo", group_path %>
+    <%= link_to "Todo-APP", group_path %>
   </div>
   <div class="group_field">
     <%= form_with model: @group, url: group_path, method: :patch, local: true do |f| %>
@@ -8,6 +8,9 @@
         <div class="new_group_name">
           <%= f.label :"グループ名" %><span class="title_span">*</span>
           <%= f.text_field :name, id: "group_name_input" %>
+          <ul class="input_error">
+            <li id="group_name_error"></li>
+          </ul>
         </div>
         <div class="new_search">
           <%= f.label :"メンバー選択" %>

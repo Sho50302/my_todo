@@ -11,7 +11,7 @@
   width: 100%;
   font-size: 60px;
   text-align: center;
-  line-height: 80px;
+  line-height: 70px;
   padding: 20px 0;
 }
 
@@ -29,11 +29,11 @@
 .sign_up_user {
   width: 550px;
   margin: 0 auto;
-  background-color: #fff;
 }
 
 .sign_up_user_contents {
-  height: 550px;
+  height: 100%;
+  background-color: #fff;
 }
 
 .sign_up_image {
@@ -45,8 +45,7 @@
   line-height: 115px;
 }
 
-
-.user_image_field {
+.user_image {
   width: 70px;
   height: 70px;
   border-radius: 50px;
@@ -56,12 +55,7 @@
   cursor: pointer;
 }
 
-.user_image {
-  width: 60px;
-  height: 60px;
-}
-
-#user_user_image {
+#file {
   display: none;
 }
 
@@ -77,8 +71,17 @@
 }
 
 .sign_up_field {
+  height: 100%;
   margin-top: 20px;
   font-size: 15px;
+  position: relative;
+}
+
+#password_eye {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  cursor: pointer;
 }
 
 .user_input {
@@ -115,8 +118,14 @@
 
 .sign_in_path {
   text-align: end;
+  padding-bottom: 20px;
 }
 
 .sign_in_path a {
   color: #87cefa;
+}
+
+.input_error {
+  margin-top: 5px;
+  color: #ff6347;
 }

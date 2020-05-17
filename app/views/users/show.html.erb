@@ -1,6 +1,6 @@
 <div id="user_show">
   <div id="app_title">
-    <%= link_to "My-Todo", tasks_path %>
+    <%= link_to "Todo-APP", tasks_path %>
   </div>
   <div class="show_field">
     <div class="user_data">
@@ -15,7 +15,7 @@
       <ul>
         <li class="edit_btn"><%= link_to "編集", edit_user_registration_path %></li>
         <li class="logout_btn"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-        <li class="delete_btn"><%= link_to "退会", user_registration_path, method: :delete %></li>
+        <li class="delete_btn"><%= link_to "退会", user_registration_path, method: :delete, data: {confirm: "本当に退会しますか？"} %></li>
       </ul>
     </div>
   </div>
