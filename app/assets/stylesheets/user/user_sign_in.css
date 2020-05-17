@@ -4,11 +4,10 @@ a {
 
 #sign_in {
   width: 100vw;
-  height: 100vh;
-  background-image: url("../Yuu171226IMGL0015.jpg");
-  background-size: cover;
-  background-position: center;
+  height: 100%;
   font-family: serif;
+  position: fixed;
+  z-index: -1;
 }
 
 .top_title {
