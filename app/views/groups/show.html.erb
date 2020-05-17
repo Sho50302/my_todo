@@ -51,14 +51,6 @@
               <i class="fas fa-feather-alt"></i>
             <% end %>
           </div>
-          <div class="task_select">
-            <select class="select_tasks">
-              <option>並び替え</option>
-              <option>新着順</option>
-              <option>古い順</option>
-              <option>期限近い順</option>
-            </select>
-          </div>
         </div>
       </div>
       <div class="right_body">
@@ -67,6 +59,15 @@
             <div id="task">
               <div class="task_name">
                 <p><%= task.title %></p>
+              </div>
+              <div class="task_end_date">
+                <p class="limit_date"><%= task.end_date%></p>
+                <div class="task_end_time">
+                  <p><%= task.end_time_hour%></p>
+                  <span>:</span>
+                  <p><%= task.end_time_minute%></p>
+                  <p>まで。</p>
+                </div>
               </div>
               <div class="task_complete">
                 <%= link_to "完了", group_task_path(@group, task), method: :delete, data:{confirm: "完了でよいですか？"}, class: "complete_btn" %>
