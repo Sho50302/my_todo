@@ -34,7 +34,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def update
     @user = User.find(current_user.id)
     if @user.update(user_params)
-      redirect_to user_path(current_user.id)
+      redirect_to root_path
     else
       render :edit
     end
@@ -60,7 +60,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
   def after_update_path_for(resource)
-    user_path(current_user.id)
+    root_path
   end
 
   # If you have extra params to permit, append them to the sanitizer.
