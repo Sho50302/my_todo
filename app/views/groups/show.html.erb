@@ -1,4 +1,4 @@
-<div id="task_index">
+<div id="group_show">
   <div class="task_contents">
     <div class="left_contents">
       <div class="left_head">
@@ -19,13 +19,13 @@
             <i class="fas fa-door-open"></i><br>
           <% end %>
         </div>
-          <div class="body_body">
+          <div class="group_body_body">
           </div>
       </div>
     </div>
     <div class="right_content">
-      <div class="right_head">
-        <div class="right_head_left">
+      <div class="group_right_head">
+        <div class="group_right_head_left">
           <div class="group_contents">
             <div class="group_name">
               <p><%= @group.name %></p>
@@ -45,7 +45,7 @@
             <%= link_to "グループ編集", edit_group_path(@group) %>
           </div>
         </div>
-        <div class="right_head_right">
+        <div class="group_right_head_right">
           <div class="new_task">
             <%= link_to new_group_task_path(@group) do %>
               <i class="fas fa-feather-alt"></i>
@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="right_body">
+      <div class="group_right_body">
         <% @tasks.each do |task| %>
           <%= link_to group_task_path(@group, task) do %>
             <div id="task">

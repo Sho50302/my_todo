@@ -47,7 +47,7 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to root_path
     else
-      render :new
+      render :user_new
     end
   end
 

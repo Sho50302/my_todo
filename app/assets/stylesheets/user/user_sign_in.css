@@ -1,79 +1,226 @@
-a {
-  text-decoration: none;
+@media screen and (min-width: 1100px){
+
+  #sign_in_image {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: -1;
+  }
+  
+  .sign_in_top_title {
+    font-size: 60px;
+    text-align: center;
+    line-height: 80px;
+    padding: 20px 0;
+  }
+  
+  .user_sign_in {
+    width: 550px;
+    background-color: #fff;
+    margin: 0 auto;
+    border: 1px solid;
+  }
+  
+  .sign_up_path {
+    text-align: center;
+    line-height: 150px;
+  }
+  
+  .sign_up_path_btn {
+    display: inline-block;
+    width: 330px;
+    background-color: #ff6347;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    line-height: 50px;
+    color: #000;
+  }
+  
+  .sign_in_input {
+    width: 350px;
+    margin: 0 auto;
+  }
+  
+  .sign_in_field {
+    height: 80px;
+  }
+  
+  .field_input {
+    width: 350px;
+    height: 40px;
+    font-size: 15px;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+  }
+    
+  .sign_in_action {
+    width: 330px;
+    margin: 40px auto;
+  }
+  
+  .sign_in_btn {
+    width: 330px;
+    height: 50px;
+    background-color: #87cefa;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+  }
+  
 }
 
-#sign_in {
-  width: 100vw;
-  height: 100%;
-  font-family: serif;
-  position: fixed;
-  z-index: -1;
-}
+/* スマートフォン */
+@media screen and (max-width: 480px){
 
-.top_title {
-  width: 100%;
-  font-size: 60px;
-  text-align: center;
-  line-height: 80px;
-  padding: 20px 0;
-}
+  #sign_in {
+    width: 100%;
+    position: fixed;
+  }
 
-.user_sign_in {
-  width: 550px;
-  height: 500px;
-  background-color: #fff;
-  margin: 0 auto;
+  #sign_in_image {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+  
+  .sign_in_top_title {
+    margin: 25% 0;
+    font-size: 60px;
+    text-align: center;
+    line-height: 80px;
+  }
+  
+  .sign_up_path {
+    text-align: center;
+    line-height: 150px;
+  }
+  
+  .sign_up_path_btn {
+    display: inline-block;
+    width: 330px;
+    background-color: #ff6347;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    line-height: 50px;
+    color: #000;
+  }
+  
+  .sign_in_input {
+    width: 350px;
+    margin: 0 auto;
+  }
+  
+  .sign_in_field {
+    height: 80px;
+  }
+  
+  .field_input {
+    width: 350px;
+    height: 40px;
+    font-size: 15px;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+  }
+  
+  .sign_in_action {
+    width: 330px;
+    margin: 30px auto;
+  }
+  
+  .sign_in_btn {
+    width: 330px;
+    height: 50px;
+    background-color: #87cefa;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+  }
 }
+/* iPad */
+@media screen and (min-width: 480px) and (max-width: 1100px){
 
-.sign_up_path {
-  margin: 0 auto;
-  text-align: center;
-  line-height: 150px;
-}
-
-.sign_up_path_btn {
-  display: inline-block;
-  width: 330px;
-  background-color: #ff6347;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  outline: none;
-  line-height: 50px;
-  color: #000;
-}
-
-.sign_in_input {
-  width: 350px;
-  margin: 0 auto;
-}
-
-.sign_in_field {
-  height: 80px;
-}
-
-.field_input {
-  width: 350px;
-  height: 40px;
-  font-size: 15px;
-  padding: 0 10px;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid;
-}
-
-.sign_in_action {
-  width: 330px;
-  margin: 30px auto;
-}
-
-.sign_in_btn {
-  width: 330px;
-  height: 50px;
-  background-color: #87cefa;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  outline: none;
-  border: none;
+  #sign_in_image {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+  
+  .sign_in_top_title {
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    line-height: 80px;
+    padding: 25% 0;
+  }
+  
+  .user_sign_in {
+    width: 60%;
+    background-color: #fff;
+    margin: 0 auto;
+    border: 1px solid;
+  }
+  
+  .sign_up_path {
+    text-align: center;
+    line-height: 150px;
+  }
+  
+  .sign_up_path_btn {
+    display: inline-block;
+    width: 330px;
+    background-color: #ff6347;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    line-height: 50px;
+    color: #000;
+  }
+  
+  .sign_in_input {
+    width: 350px;
+    margin: 0 auto;
+  }
+  
+  .sign_in_field {
+    height: 80px;
+  }
+  
+  .field_input {
+    width: 350px;
+    height: 40px;
+    font-size: 15px;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+  }
+  
+  .sign_in_action {
+    width: 330px;
+    margin: 30px auto;
+  }
+  
+  .sign_in_btn {
+    width: 330px;
+    height: 50px;
+    background-color: #87cefa;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+  }
 }

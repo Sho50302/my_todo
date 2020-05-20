@@ -1,6 +1,6 @@
 <div id="task_new">
   <div id="app_title">
-    <%= link_to "Todo-APP", group_path(@group) %>
+    <%= link_to "Todo-APP", group_path(@group.id) %>
   </div>
   <div class="task_new_form">
     <%= form_with model: [@group, @task], local: true do |f| %>
@@ -8,6 +8,9 @@
         <div class="task_title">
           <%= f.label :"タイトル" %><span class="title_span">*</span>
           <%= f.text_field :title, class: "input_title" %>
+          <ul class="input_error">
+            <li id="title_error"></li>
+          </ul>
         </div>
         <div class="task_text">
           <%= f.label :"本文" %>

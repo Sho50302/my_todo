@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates :encrypted_password, presence: :true, length: {minimum: 7}, format: {with: /\A(?=.*?[a-z])(?=.*?\d)(?=.*?[!-\/:-@\[-`{-~])[!-~]{7,100}+\z/i}
   
 
-  has_many :group_users
+  has_many :group_users, dependent: :destroy
   has_many :groups, through: :group_users
   has_many :tasks, dependent: :destroy
 

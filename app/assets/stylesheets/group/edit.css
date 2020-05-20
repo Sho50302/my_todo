@@ -1,44 +1,139 @@
-.edit_group {
-  width: 400px;
-  height: 50px;
-  margin: 30px auto;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
+@media screen and (min-width: 1100px){
+  .edit_group {
+    width: 400px;
+    height: 50px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  
+  .e_btn {
+    width: 150px;
+    height: 50px;
+    background-color: #00ff7f;
+    line-height: 48px;
+  }
+  
+  .d_btn {
+    width: 150px;
+    height: 50px;
+    background-color: #ff6347;
+    line-height: 50px;
+  }
+  
+  .d_btn a {
+    color: #000;
+  }
+  
+  #edit_group_btn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #00ff7f;
+  }
+  
+  #delete_group_btn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #ff6347;
+  }
 }
-
-.e_btn {
-  width: 150px;
-  height: 50px;
-  background-color: #00ff7f;
-  line-height: 48px;
+/* スマートフォン */
+@media screen and (max-width: 480px){
+  .edit_group {
+    height: 50px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  
+  .e_btn {
+    width: 150px;
+    height: 50px;
+    background-color: #00ff7f;
+    line-height: 48px;
+  }
+  
+  .d_btn {
+    width: 150px;
+    height: 50px;
+    background-color: #ff6347;
+    line-height: 50px;
+  }
+  
+  .d_btn a {
+    color: #000;
+  }
+  
+  #edit_group_btn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #00ff7f;
+  }
+  
+  #delete_group_btn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #ff6347;
+  }
 }
-
-.d_btn {
-  width: 150px;
-  height: 50px;
-  background-color: #ff6347;
-  line-height: 50px;
-}
-
-.d_btn a {
-  color: #000;
-}
-
-#edit_group_btn {
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background-color: #00ff7f;
-}
-
-#delete_group_btn {
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background-color: #ff6347;
+/* iPad */
+@media screen and (min-width: 480px) and (max-width: 1100px){
+  .edit_group {
+    width: 400px;
+    height: 50px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  
+  .e_btn {
+    width: 150px;
+    height: 50px;
+    background-color: #00ff7f;
+    line-height: 48px;
+  }
+  
+  .d_btn {
+    width: 150px;
+    height: 50px;
+    background-color: #ff6347;
+    line-height: 50px;
+  }
+  
+  .d_btn a {
+    color: #000;
+  }
+  
+  #edit_group_btn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #00ff7f;
+  }
+  
+  #delete_group_btn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #ff6347;
+  }
 }
