@@ -1,7 +1,7 @@
 li {
   list-style: none;
 }
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 960px){
 
   #user_show {
     width: 100%;
@@ -68,7 +68,7 @@ li {
   }
 }
 /* スマートフォン */
-@media screen and (max-width: 480px){
+@media screen and (max-width: 560px){
   #user_show {
     height: 100vh;
     background-color: #f5f5f5;
@@ -133,7 +133,7 @@ li {
     font-weight: bold;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 1100px){
+@media screen and (min-width: 560px) and (max-width: 960px){
   #user_show {
     height: 100vh;
     background-color: #f5f5f5;

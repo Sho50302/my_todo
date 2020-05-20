@@ -1,4 +1,4 @@
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 960px){
 
   #group_show {
     height: 100vh;
@@ -48,7 +48,7 @@
   }
 }
 /* スマートフォン */
-@media screen and (max-width: 480px){
+@media screen and (max-width: 560px){
 
   .group_right_head {
     width: 100%;
@@ -78,7 +78,7 @@
   }
 }
 /* iPad */
-@media screen and (min-width: 480px) and (max-width: 1100px){
+@media screen and (min-width: 560px) and (max-width: 960px){
 
   .group_body_body {
     width: 300px;
