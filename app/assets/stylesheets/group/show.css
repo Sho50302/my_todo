@@ -1,7 +1,7 @@
 @media screen and (min-width: 960px){
 
   #group_show {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
   }
 
@@ -24,7 +24,6 @@
   }
 
   .group_right_head_left {
-    width: 700px;
     height: 100%;
     padding: 0 20px;
     display: flex;
@@ -42,9 +41,7 @@
 
   .group_right_head_right {
     display: flex;
-    align-items: center;
     padding: 0 30px;
-    border-left: 1px solid;
   }
 }
 /* スマートフォン */

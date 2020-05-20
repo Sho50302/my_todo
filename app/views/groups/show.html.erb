@@ -41,15 +41,15 @@
              <% end %>
             </div>
           </div>
-          <div class="group_edit">
-            <%= link_to "グループ編集", edit_group_path(@group) %>
-          </div>
-        </div>
-        <div class="group_right_head_right">
-          <div class="new_task">
-            <%= link_to new_group_task_path(@group) do %>
-              <i class="fas fa-feather-alt"></i>
-            <% end %>
+          <div class="group_right_head_right">
+            <div class="group_edit">
+              <%= link_to "グループ編集", edit_group_path(@group) %>
+            </div>
+            <div class="new_task">
+              <%= link_to new_group_task_path(@group) do %>
+                <i class="fas fa-feather-alt"></i>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
